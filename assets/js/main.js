@@ -14,6 +14,7 @@
 
 const casualNumberEl = document.getElementById("casual-number")
 const formEl = document.getElementById("form")
+const divFormEl = document.getElementById("div-form")
 let generatedNumber = []
 
 // Aggiungo la funzione dei numeri randomici
@@ -26,31 +27,34 @@ function getRandomInt(min, max) {
 
 //Salvo i 5 numeri dentro una variabile/array
 
-for ( let i = 0; i < 5; i++){
-    generatedNumber.push(getRandomInt(1,100))
+for (let i = 0; i < 5; i++) {
+    generatedNumber.push(getRandomInt(1, 100))
 }
 
 // Visualizzare in pagina i  5 numeri casuali
 
 casualNumberEl.innerText = generatedNumber
 
-
 // Fare partire il timer che fara scomparire i numeri dopo 30 secondi(setTimeout)
+//  e fare apparire gli input
+const clock = setTimeout(function () {
+    casualNumberEl.classList.add("d-none")
+    divFormEl.classList.remove("d-none")
+    divFormEl.classList.add("d-block")
+}, 10000)
 
-// Far apparire in sequenza 5 input
-
-// Prendere i dati forniti dai 5 input 
+// Prendere i dati forniti dai 5 input
 
 // Faccio la verifica comparando i numeri
 
 // Creo una funzione per verificare il risultato
 
-// Creo una variabile per i numeri indovinati e una per il punteggio 
+// Creo una variabile per i numeri indovinati e una per il punteggio
 
 // ciclo dentro  ai numeri mandati dall'input
 
 // SE nei numeri generati c'è uno dei numeri che ho scritto
-// -aumento il punteggio 
+// -aumento il punteggio
 // -aggiungo il numero alla variabile dei numeri indovinati
 
 // Stampo nella DOM il risultato in un messaggio con interpolati il punteggio e i numeri indovinati
