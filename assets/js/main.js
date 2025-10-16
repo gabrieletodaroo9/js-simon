@@ -82,8 +82,10 @@ console.log(counter);
 // Stampo nella DOM il risultato in un messaggio con interpolati il punteggio e i numeri indovinati
 const result = document.getElementById("result") 
 
-result.innerText = `Hai indovinato ${counter} numeri e sono: ${correctNumb}, i numeri corretti erano ${generatedNumber} e tu hai scritto ${userNumb}`
-
+result.innerText = `Quanti numeri hai indovinato? ${counter}
+Numeri indovinati: ${correctNumb}
+I tuoi numeri: ${userNumb}
+ Numeri corretti: ${generatedNumber}` 
 }
 
 )

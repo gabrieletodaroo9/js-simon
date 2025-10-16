@@ -13,36 +13,42 @@
 
 </head>
 
-<body>
+<body class="overflow-hidden">
+    <main
+        style="background-image: url(https://www.shutterstock.com/image-photo/memory-game-therapy-session-260nw-2484095813.jpg); background-position: center; background-size: cover; height:100vh;">
 
-    <div id="casual-number" class="fw-bold fs-1 text-center"></div>
-
-    <div id="div-form" class="d-none p-4 ">
-        <h1 class="text-center">Inserisci i numeri che hai appena visto(anche non in ordine)</h1>
-        <form id="form" class="row g-2 justify-content-center mt-5">
-            <div class="col-auto">
-                <input type="number" id="input-1" placeholder="Inserisci un numero">
-            </div>
-            <div class="col-auto">
-                <input type="number" id="input-2" placeholder="Inserisci un numero">
-            </div>
-            <div class="col-auto">
-                <input type="number" id="input-3" placeholder="Inserisci un numero">
-            </div>
-            <div class="col-auto">
-                <input type="number" id="input-4" placeholder="Inserisci un numero">
-            </div>
-            <div class="col-auto">
-                <input type="number" id="input-5" placeholder="Inserisci un numero">
-            </div>
-            <div class="col-12 text-center mt-3 ">
-                <button type="submit" id="start-btn" class=" btn btn-dark py-2 px-4 rounded-4">Controlla se i numeri corrispondono</button>
-            </div>
-        </form>
+        <h1 class="text-white text-center">RICORDA I NUMERI</h1>
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div id="casual-number" class="fw-bold fs-1 text-center text-white "></div>
+        
+        <div id="div-form" class="d-none p-4 ">
+            <h2 class="text-center text-white">Inserisci i numeri che hai appena visto(anche non in ordine)</h2>
+            <form id="form" class="row g-2 justify-content-center mt-5 ">
+                <div class="col-auto">
+                    <input type="number" id="input-1" placeholder="Inserisci un numero">
+                </div>
+                <div class="col-auto">
+                    <input type="number" id="input-2" placeholder="Inserisci un numero">
+                </div>
+                <div class="col-auto">
+                    <input type="number" id="input-3" placeholder="Inserisci un numero">
+                </div>
+                <div class="col-auto">
+                    <input type="number" id="input-4" placeholder="Inserisci un numero">
+                </div>
+                <div class="col-auto">
+                    <input type="number" id="input-5" placeholder="Inserisci un numero">
+                </div>
+                <div class="col-12 text-center mt-3 ">
+                    <button type="submit" id="start-btn" class=" btn btn-dark py-2 px-4 rounded-4">Controlla se i numeri
+                        corrispondono</button>
+                </div>
+            </form>
+        </div>
+        
+        <div id="result" class="text-center mt-4 px-3 fs-1 fw-bold text-white"></div>
     </div>
-
-    <div id="result"></div>
-
+    </main>
 
     <script src="./assets/js/main.js"></script>
 </body>
