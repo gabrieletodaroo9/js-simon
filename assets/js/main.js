@@ -12,6 +12,10 @@
 
 // Aggiungo le variabili che mi servono 
 
+const casualNumberEl = document.getElementById("casual-number")
+const formEl = document.getElementById("form")
+let generatedNumber = []
+
 // Aggiungo la funzione dei numeri randomici
 
 function getRandomInt(min, max) {
@@ -22,7 +26,14 @@ function getRandomInt(min, max) {
 
 //Salvo i 5 numeri dentro una variabile/array
 
+for ( let i = 0; i < 5; i++){
+    generatedNumber.push(getRandomInt(1,100))
+}
+
 // Visualizzare in pagina i  5 numeri casuali
+
+casualNumberEl.innerText = generatedNumber
+
 
 // Fare partire il timer che fara scomparire i numeri dopo 30 secondi(setTimeout)
 
