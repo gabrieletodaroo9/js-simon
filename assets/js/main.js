@@ -42,8 +42,20 @@ const clock = setTimeout(function () {
     divFormEl.classList.remove("d-none")
     divFormEl.classList.add("d-block")
 }, 10000)
+// Creo una funzione da collegare all'evento dell'invio del form
+formEl.addEventListener("submit",function(event){
+event.preventDefault()
+//Aggiungere variabili per salvare gli input 
+const input1 = document.getElementById("input-1")
+const input2 = document.getElementById("input-2")
+const input3 = document.getElementById("input-3")
+const input4 = document.getElementById("input-4")
+const input5 = document.getElementById("input-5")
+// console.log(input1);
+// e Prendere i dati forniti dai 5 input salvandoli in un array e convertendoli in numeri 
 
-// Prendere i dati forniti dai 5 input
+const userNumb = [Number(input1.value),Number(input2.value),Number(input3.value),Number(input4.value),Number(input5.value)]
+console.log(userNumb);
 
 // Faccio la verifica comparando i numeri
 
@@ -58,3 +70,8 @@ const clock = setTimeout(function () {
 // -aggiungo il numero alla variabile dei numeri indovinati
 
 // Stampo nella DOM il risultato in un messaggio con interpolati il punteggio e i numeri indovinati
+}
+
+
+)
+
