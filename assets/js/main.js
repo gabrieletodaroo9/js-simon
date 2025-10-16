@@ -32,6 +32,7 @@ for (let i = 0; i < 5; i++) {
 }
 
 // Visualizzare in pagina i  5 numeri casuali
+console.log(generatedNumber);
 
 casualNumberEl.innerText = generatedNumber
 
@@ -57,21 +58,33 @@ const input5 = document.getElementById("input-5")
 const userNumb = [Number(input1.value),Number(input2.value),Number(input3.value),Number(input4.value),Number(input5.value)]
 console.log(userNumb);
 
-// Faccio la verifica comparando i numeri
-
-// Creo una funzione per verificare il risultato
-
 // Creo una variabile per i numeri indovinati e una per il punteggio
+
+let correctNumb = []
+let counter = 0
 
 // ciclo dentro  ai numeri mandati dall'input
 
-// SE nei numeri generati c'è uno dei numeri che ho scritto
-// -aumento il punteggio
-// -aggiungo il numero alla variabile dei numeri indovinati
+for ( i = 0; i < userNumb.length; i++ ) {
+    // SE nei numeri generati c'è uno dei numeri che ho scritto
+    if( generatedNumber.includes(userNumb[i])){
+        // -aumento il punteggio
+        counter++
+        // -aggiungo il numero alla variabile dei numeri indovinati
+        correctNumb.push(userNumb[i])
+    }
+
+}
+console.log(correctNumb);
+console.log(counter);
+
 
 // Stampo nella DOM il risultato in un messaggio con interpolati il punteggio e i numeri indovinati
-}
+const result = document.getElementById("result") 
 
+result.innerText = `Hai indovinato ${counter} numeri e sono: ${correctNumb}, i numeri corretti erano ${generatedNumber} e tu hai scritto ${userNumb}`
+
+}
 
 )
 
