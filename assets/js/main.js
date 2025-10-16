@@ -42,7 +42,7 @@ const clock = setTimeout(function () {
     casualNumberEl.classList.add("d-none")
     divFormEl.classList.remove("d-none")
     divFormEl.classList.add("d-block")
-}, 10000)
+}, 5000)
 // Creo una funzione da collegare all'evento dell'invio del form
 formEl.addEventListener("submit",function(event){
 event.preventDefault()
